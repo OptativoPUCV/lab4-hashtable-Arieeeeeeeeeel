@@ -88,13 +88,13 @@ void eraseMap(HashMap * map,  char * key) {
     return;
   }
   long pos = hash(key, map->capacity);
-  while (map->bucket[pos] != NULL){
+  while (map->buckets[pos] != NULL){
     if (strcmp(map->buckets[pos]->key, key) == 0){
-      map->bucket[pos]->key = NULL;
+      map->buckets[pos]->key = NULL;
       map->size = map->size - 1;
       return;
     }
-    
+    pos = (pos + 1) % map->capacity;
   }
 }
 
