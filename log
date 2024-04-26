@@ -4,3 +4,14 @@ Fri 26 Apr 2024 04:48:53 PM UTC:
  tests:  5|4
 total_score: 30/70
 8867b53
+Fri 26 Apr 2024 05:00:32 PM UTC: 
+ hashmap.c | 25 +++++++++++++++++++------
+ 1 file changed, 19 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:103:8: error: unused variable ‘pos’ [-Werror=unused-variable]
+  103 |   long pos = hash(key, map->capacity);
+      |        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+1c74b70
