@@ -87,7 +87,7 @@ void enlarge(HashMap * map) {
   for (int i = 0; i < map->capacity; i++){
     if (arregloAntiguo[i] != NULL && arregloAntiguo[i]->key != NULL){
       int pos = hash(arregloAntiguo[i]->key, map->capacity);
-      while (map->bucket[pos] != NULL){
+      while (map->buckets[pos] != NULL){
         pos = (pos + 1) % map->capacity;
       }
       map->buckets[pos] = arregloAntiguo[i];
