@@ -154,3 +154,14 @@ hashmap.c:79:11: error: unused variable ‘arregloAntiguo’ [-Werror=unused-var
 cc1: all warnings being treated as errors
 Compilation failed
 74037d1
+Sat 27 Apr 2024 07:51:44 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:90:19: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   90 |       while (map->bucket[pos] != NULL){
+      |                   ^~~~~~
+      |                   buckets
+Compilation failed
+e065265

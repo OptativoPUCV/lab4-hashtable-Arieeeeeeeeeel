@@ -82,7 +82,7 @@ void enlarge(HashMap * map) {
   if (map->buckets == NULL){
     return;
   }
-  map->size = 0
+  map->size = 0;
 
   for (int i = 0; i < map->capacity; i++){
     if (arregloAntiguo[i] != NULL && arregloAntiguo[i]->key != NULL){
