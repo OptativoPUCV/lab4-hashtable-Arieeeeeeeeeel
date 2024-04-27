@@ -84,14 +84,13 @@ void enlarge(HashMap * map) {
   }
   map->size = 0;
 
-  for (int i = 0; i < map->capacity; i++){
+  for (int i = 0; i < map->capacity / 2; i++){
     if (arregloAntiguo[i] != NULL && arregloAntiguo[i]->key != NULL){
-      int pos = hash(arregloAntiguo[i]->key, map->capacity);
-      while (map->buckets[pos] != NULL){
-        pos = (pos + 1) % map->capacity;
+      for (long i = 0; i < map->capacity / 2; i++) {
+          if (old_buckets[i] != NULL && old_buckets[i]->key != NULL) {
+              insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+          }
       }
-      map->buckets[pos] = arregloAntiguo[i];
-      map->size++;
     }
   }
   enlarge_called = 1; //no borrar (testing purposes)
