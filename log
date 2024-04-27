@@ -136,3 +136,21 @@ hashmap.c:79:11: error: unused variable ‘arregloAntiguo’ [-Werror=unused-var
 cc1: all warnings being treated as errors
 Compilation failed
 83bd9d4
+Sat 27 Apr 2024 07:51:33 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:85:16: error: expected ‘;’ before ‘for’
+   85 |   map->size = 0
+      |                ^
+      |                ;
+   86 | 
+   87 |   for (int i = 0; i < map->capacity; i++){
+      |   ~~~           
+hashmap.c:79:11: error: unused variable ‘arregloAntiguo’ [-Werror=unused-variable]
+   79 |   Pair ** arregloAntiguo = map->buckets;
+      |           ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+74037d1

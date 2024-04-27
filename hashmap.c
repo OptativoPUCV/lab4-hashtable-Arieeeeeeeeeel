@@ -80,7 +80,7 @@ void enlarge(HashMap * map) {
   map->capacity = map->capacity * 2;
   map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
   if (map->buckets == NULL){
-    return
+    return;
   }
   map->size = 0
 
